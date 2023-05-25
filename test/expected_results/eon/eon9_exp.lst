@@ -1,0 +1,11 @@
+
+test/exp/test/gen/eon/eon9_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	51237f39 	sub	w25, w25, #0x8df
+   4:	517c0ce7 	sub	w7, w7, #0xf03, lsl #12
+   8:	cae70b24 	eon	x4, x25, x7, ror #2
+   c:	8a000000 	and	x0, x0, x0

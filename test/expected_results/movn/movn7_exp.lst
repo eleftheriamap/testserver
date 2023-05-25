@@ -1,0 +1,10 @@
+
+test/exp/test/gen/movn/movn7_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d10d6d8c 	sub	x12, x12, #0x35b
+   4:	1281c16c 	mov	w12, #0xfffff1f4            	// #-3596
+   8:	8a000000 	and	x0, x0, x0

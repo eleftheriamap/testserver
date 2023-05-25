@@ -1,0 +1,13 @@
+
+test/exp/test/gen/bcond/bcond6_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	913c34d3 	add	x19, x6, #0xf0d
+   4:	eb06027f 	cmp	x19, x6
+   8:	5400004c 	b.gt	0x10
+   c:	91058231 	add	x17, x17, #0x160
+  10:	9168aa31 	add	x17, x17, #0xa2a, lsl #12
+  14:	8a000000 	and	x0, x0, x0

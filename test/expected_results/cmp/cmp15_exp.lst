@@ -1,0 +1,9 @@
+
+test/exp/test/gen/cmp/cmp15_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	f150f0bf 	cmp	x5, #0x43c, lsl #12
+   4:	8a000000 	and	x0, x0, x0

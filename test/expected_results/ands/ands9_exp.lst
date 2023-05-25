@@ -1,0 +1,11 @@
+
+test/exp/test/gen/ands/ands9_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d1322b39 	sub	x25, x25, #0xc8a
+   4:	114a637b 	add	w27, w27, #0x298, lsl #12
+   8:	6a1b032c 	ands	w12, w25, w27
+   c:	8a000000 	and	x0, x0, x0

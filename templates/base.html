@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <!-- Title Section-->
+  {% if title %}
+  <title> Testing Tool - {{ title }} </title>
+  {% else %}
+    <title>ARM Emulator-Assembler Testing Tool</title>
+  {% endif %}
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.5.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <!-- Logo -->
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center">
+        <span class="d-none d-lg-block">Testing Tool</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+    
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+    
+      <!-- Generate Tests Nav-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" href="/compile-solution">
+          <span>Compile Solution</span>
+        </a>
+      </li><!-- End Generate Tests Nav -->
+
+      <!-- Assemble Tests Nav-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <span>Assemble Tests</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/assembler-results">
+              <i class="bi bi-circle"></i><span>Assemble All Tests</span>
+            </a>
+          </li> 
+          <li>
+            <a href="/find-test-assemble">
+              <i class="bi bi-circle"></i><span>Assemble Specific Test</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Emulate Tests Nav-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <span>Emulate Tests</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/emulator-results">
+              <i class="bi bi-circle"></i><span>Emulate All Tests</span>
+            </a>
+          </li> 
+          <li>
+            <a href="/find-test-emulate">
+              <i class="bi bi-circle"></i><span>Emulate Specific Test</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Assemble Tests Nav -->
+
+      <!-- Manual Nav-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/">
+          <i class="bi bi-question-circle"></i>
+          <span>Instruction Manual</span>
+        </a>
+      </li><!-- End Manual Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <!-- each page will have different body content-->
+  <main id="main" class="main">
+    {% block content %} {% endblock %}
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="../static/vendor/tinymce/tinymce.min.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

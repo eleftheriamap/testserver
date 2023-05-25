@@ -1,0 +1,10 @@
+
+test/exp/test/gen/movz/movz9_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d1170000 	sub	x0, x0, #0x5c0
+   4:	d2991020 	mov	x0, #0xc881                	// #51329
+   8:	8a000000 	and	x0, x0, x0

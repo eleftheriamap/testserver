@@ -1,0 +1,52 @@
+<!--main page-->
+{% extends 'base.html' %}
+
+{% block content %}
+   
+    {% if path_error %}
+    <!-- Path Error Card -->
+    <div class="col-xxl-4 col-xl-12">
+        <div class="card info-card manual-card">
+            <div class="card-body">
+                <h5 class="card-title"> <b style='color:red;'> Directory Not Found </b> </h5>
+                <p> Please make sure that the directory /testserver/solution exists. </p>
+              </div>
+        </div>
+    </div><!-- End Path Error Card -->
+
+    {% elif makefile_error %}
+    <!-- File Error Card -->
+    <div class="col-xxl-4 col-xl-12">
+        <div class="card info-card manual-card">
+            <div class="card-body">
+                <h5 class="card-title"> <b style='color:red;'> Makefile Not Found </b> </h5>
+                <p> Please make sure that your Makefile is anywhere under the /testserver/ directory</p>
+              </div>
+        </div>
+    </div><!-- End File Error Card -->
+    
+    {% elif execution_error %}
+    <!-- Execution Error Card -->
+    <div class="col-xxl-4 col-xl-12">
+        <div class="card info-card manual-card">
+            <div class="card-body">
+                <h5 class="card-title"> <b style='color:red;'> Makefile Execution Error </b> </h5>
+                <p> The error below was generated during Makefile execution: </p>
+                <p> {{execution_error}} </p>
+            </div>
+        </div>
+    </div><!-- Execution Error Card -->
+
+    {%else%} 
+        <!-- Success Card -->
+        <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card manual-card">
+                <div class="card-body">
+                    <h5 class="card-title"> <b style='color:green;'> Makefile successfully compiled! </b> </h5>
+                    <p> Your solution has successfully compiled! </p>
+                </div>
+            </div>
+        </div><!-- Success Error Card -->
+    {% endif %}
+
+{% endblock %}

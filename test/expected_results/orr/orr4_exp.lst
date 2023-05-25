@@ -1,0 +1,11 @@
+
+test/exp/test/gen/orr/orr4_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	91114084 	add	x4, x4, #0x450
+   4:	1101d5ef 	add	w15, w15, #0x75
+   8:	aa0f0091 	orr	x17, x4, x15
+   c:	8a000000 	and	x0, x0, x0

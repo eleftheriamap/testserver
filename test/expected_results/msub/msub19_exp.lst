@@ -1,0 +1,12 @@
+
+test/exp/test/gen/msub/msub19_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d1714884 	sub	x4, x4, #0xc52, lsl #12
+   4:	51771884 	sub	w4, w4, #0xdc6, lsl #12
+   8:	9175dcc6 	add	x6, x6, #0xd77, lsl #12
+   c:	1b04988d 	msub	w13, w4, w4, w6
+  10:	8a000000 	and	x0, x0, x0

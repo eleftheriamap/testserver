@@ -1,0 +1,10 @@
+
+test/exp/test/gen/cmn/cmn10_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	914aa000 	add	x0, x0, #0x2a8, lsl #12
+   4:	2b80143f 	cmn	w1, w0, asr #5
+   8:	8a000000 	and	x0, x0, x0

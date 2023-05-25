@@ -1,0 +1,10 @@
+
+test/exp/test/gen/cmp/cmp18_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d1017884 	sub	x4, x4, #0x5e
+   4:	eb0400bf 	cmp	x5, x4
+   8:	8a000000 	and	x0, x0, x0

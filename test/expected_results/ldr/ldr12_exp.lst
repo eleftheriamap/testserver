@@ -1,0 +1,11 @@
+
+test/exp/test/gen/ldr/ldr12_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	1137d610 	add	w16, w16, #0xdf5
+   4:	91216a73 	add	x19, x19, #0x85a
+   8:	b8736a1c 	ldr	w28, [x16, x19]
+   c:	8a000000 	and	x0, x0, x0

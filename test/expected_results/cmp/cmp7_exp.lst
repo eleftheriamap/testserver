@@ -1,0 +1,10 @@
+
+test/exp/test/gen/cmp/cmp7_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d12c1b7b 	sub	x27, x27, #0xb06
+   4:	6b1b413f 	cmp	w9, w27, lsl #16
+   8:	8a000000 	and	x0, x0, x0

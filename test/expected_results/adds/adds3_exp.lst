@@ -1,0 +1,11 @@
+
+test/exp/test/gen/adds/adds3_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	915a97de 	add	x30, x30, #0x6a5, lsl #12
+   4:	513b0ab5 	sub	w21, w21, #0xec2
+   8:	ab1503dd 	adds	x29, x30, x21
+   c:	8a000000 	and	x0, x0, x0

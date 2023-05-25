@@ -1,0 +1,11 @@
+
+test/exp/test/gen/bics/bics6_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	1134a98c 	add	w12, w12, #0xd2a
+   4:	5156e5ce 	sub	w14, w14, #0x5b9, lsl #12
+   8:	ea2e0192 	bics	x18, x12, x14
+   c:	8a000000 	and	x0, x0, x0

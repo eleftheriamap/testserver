@@ -1,0 +1,112 @@
+<!--results page for all tests-->
+{% extends 'base.html' %}
+
+<!--body part-->
+{% block content %}
+
+    <!-- if test or solution directory are not found-->
+    {% if directory_error %}
+        <!-- Directory Error Card -->
+        <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card directory_error-card">
+                <div class="card-body">
+                    <h5 class="card-title"><b style='color:red;'> Directory Not Found </b></h5>
+                        <p> Please make sure that:
+                            <ul>
+                                <li> The /testserver/solution directory exists </li>
+                                <li> The /testserver/test/test_cases directory exists. </li>
+                                <li> The /testserver/test/expected_results directory exists. </li>
+                            </ul>
+                        </p>
+                </div>
+            </div>
+        </div><!-- End Directory Error Card -->
+
+    <!-- if files/tests are missing from ./tests directory-->    
+    {% elif file_errors %}
+        <!-- File Error Card -->
+        <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card directory_error-card">
+                <div class="card-body">
+                    <h5 class="card-title"><b style='color:red;'> File(s) Not Found</b></h5>
+                        <p> The files below are missing:
+                            <ul>
+                                {%for i in file_errors%}
+                                <li>{{i}}</li>
+                                {%endfor%}
+                            </ul>
+                        </p>
+                        <p>Please download again the /testserver/test folder. </p>
+                </div>
+            </div>
+        </div><!-- End File Error Card -->
+
+        <!-- if run_tests.py returns an error-->    
+        {% elif assembler_error %}
+        <!-- Execution Error Card -->
+        <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card directory_error-card">
+                <div class="card-body">
+                    <h5 class="card-title"><b style='color:red;'> Executable Not Found</b></h5>
+                        <p> The assemble executable was not found:  <br>
+                            <ul>
+                                <li>Please, make sure that you have compiled your solution from the navigation bar.</li>
+                                <li>Please, make sure that your assembler is implemented in an executable named assemble.</li>
+                                <li>Please, make sure that your assemble executable is somewhere under /testserver/ direcotry</li>
+
+                            </ul>
+                        </p>
+                </div>
+            </div>
+        </div><!-- End File Error Card -->
+
+    <!-- if no directory or file errors have occured-->
+    {% else %}
+        <!-- Assemble All Tests -->
+        <div class="col-12">
+            <div class="card all-tests overflow-auto">
+              <div class="card-body">
+                <h5 class="card-title">
+                        <b style='color:green;'> {{ num_cor }} out of {{ total_tests }} tests were CORRECTLY assembled.</b> <br>
+                        <b style='color:red;'>{{ num_inc }} out of {{ total_tests }} tests were INCORRECTLY assembled. </b><br>
+                        <b style='color:red;'>{{ num_fail }} out of {{ total_tests }} tests FAILED to assemble.                </b>
+                </h5>
+            
+                <table class="table table-borderless datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Test Name</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {%for i in range(0,results|length) %}
+                        <!-- if correct -->
+                        {%if results[i] == "CORRECT" %}
+                        <tr>
+                            <td><a href="/assembler-results/{{files[i]}}"> {{files[i]}} </a></td>
+                            <td><span class="badge bg-success">CORRECT</span></td>
+                        </tr>
+                         <!-- if incorrect -->
+                        {%elif results[i] == "INCORRECT" %}
+                            <tr>
+                                <td><a href="/assembler-results/{{files[i]}}"> {{files[i]}} </a></td>
+                                <td><span class="badge bg-danger">INCORRECT</span></td>
+                            </tr>
+                            <!-- if failed -->
+                        {%elif results[i] == "FAILED" %}
+                            <tr>
+                                <td><a href="/assembler-results/{{files[i]}}"> {{files[i]}} </a></td>
+                                <td><span class="badge bg-danger">FAILED</span></td>
+                            </tr>
+                        {%endif%}
+                    {%endfor%}                      
+                  </tbody>
+                </table>
+
+              </div>
+
+            </div>
+          </div><!-- End Assemble All Tests -->
+    {% endif %}
+{% endblock %}

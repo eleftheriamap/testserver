@@ -1,0 +1,12 @@
+
+test/exp/test/gen/madd/madd6_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d16d93de 	sub	x30, x30, #0xb64, lsl #12
+   4:	d12b1631 	sub	x17, x17, #0xac5
+   8:	11255400 	add	w0, w0, #0x955
+   c:	1b1103d6 	madd	w22, w30, w17, w0
+  10:	8a000000 	and	x0, x0, x0

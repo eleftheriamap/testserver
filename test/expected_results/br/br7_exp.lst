@@ -1,0 +1,14 @@
+
+test/exp/test/gen/br/br7_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d29754be 	mov	x30, #0xbaa5                	// #47781
+   4:	f2a0005e 	movk	x30, #0x2, lsl #16
+   8:	5280000b 	mov	w11, #0x0                   	// #0
+   c:	72b1400b 	movk	w11, #0x8a00, lsl #16
+  10:	b80007cb 	str	w11, [x30], #0
+  14:	d61f03c0 	br	x30
+  18:	8a000000 	and	x0, x0, x0

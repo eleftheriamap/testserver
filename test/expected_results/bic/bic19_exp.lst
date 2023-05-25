@@ -1,0 +1,11 @@
+
+test/exp/test/gen/bic/bic19_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	115362d6 	add	w22, w22, #0x4d8, lsl #12
+   4:	1165b7bd 	add	w29, w29, #0x96d, lsl #12
+   8:	8a7d4acd 	bic	x13, x22, x29, lsr #18
+   c:	8a000000 	and	x0, x0, x0

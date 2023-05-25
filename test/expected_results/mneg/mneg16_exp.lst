@@ -1,0 +1,11 @@
+
+test/exp/test/gen/mneg/mneg16_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	912e68e7 	add	x7, x7, #0xb9a
+   4:	512c2339 	sub	w25, w25, #0xb08
+   8:	9b19fcf0 	mneg	x16, x7, x25
+   c:	8a000000 	and	x0, x0, x0

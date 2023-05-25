@@ -1,0 +1,11 @@
+
+test/exp/test/gen/bic/bic3_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	516c4ce7 	sub	w7, w7, #0xb13, lsl #12
+   4:	514aa929 	sub	w9, w9, #0x2aa, lsl #12
+   8:	8a2900e5 	bic	x5, x7, x9
+   c:	8a000000 	and	x0, x0, x0

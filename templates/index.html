@@ -1,0 +1,49 @@
+<!--main page-->
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Information Card -->
+    <div class="col-xxl-4 col-xl-12">
+        <div class="card info-card manual-card">
+            <div class="card-body">
+                <h5 class="card-title"> <b>Welcome to the testing tool! </b> </h5>
+                    <p> To test your implementation, please make sure that:
+                        <ul>
+                            <li> The /testserver/solution directory exists. </li>
+                            <li> The /testserver/solution directory contains your solution and your Makefile</li>
+                            <li> The /testserver/test/test_cases directory exists.</li>
+                            <li> The /testserver/test/expected_results directory exists.</li>
+                            <li> Your assembler is implemented in the assemble executable file.</li>
+                            <li> Your emulator is implemented in the emulate executable file.</li>
+                        </ul>  
+                    </p>
+                    <br>
+                    <p> On the navigation bar you can choose to:
+                        <ul>
+                            <li> Compile Solution: compiles your solution.  </li>
+                            <li> Assemble Tests: test your assembler on all or on a specific test case.</li>
+                            <li> Emulate Tests: test your emulator on all or on a sepcific test case.</li>
+                            <li> Instruction Manual: view the instruction manual. </li>
+                        </ul>
+                    </p>
+                
+                    <br>
+                    <p> When assembling/emulating, you will be prompted to another page that will display the results of your assembler/emulator. The results can be one of the following:
+                        <ul>
+                            <li> CORRECT: assembler/emulator produced the correct result.  </li>
+                            <li> INCORRECT: assembler/emulator produced an incorrect result.</li>
+                            <li> FAILED: assembler/emulator failed to assemble/emulate.</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <p>Assembling/Emulating all the tests can take some time. </p>
+                    <br>
+                    <p> When assembling/emulating a specific test you will also be able to inspect the expected solution and the solution that your assembler/emulator provided. </p>
+
+
+              </div>
+        </div>
+    </div><!-- End Informaiton Card -->
+
+    {% endblock %}

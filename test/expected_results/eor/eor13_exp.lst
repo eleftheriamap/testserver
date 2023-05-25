@@ -1,0 +1,11 @@
+
+test/exp/test/gen/eor/eor13_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	d15cc16b 	sub	x11, x11, #0x730, lsl #12
+   4:	d17600c6 	sub	x6, x6, #0xd80, lsl #12
+   8:	4a06017a 	eor	w26, w11, w6
+   c:	8a000000 	and	x0, x0, x0

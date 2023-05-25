@@ -1,0 +1,11 @@
+
+test/exp/test/gen/ands/ands2_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	11193dad 	add	w13, w13, #0x64f
+   4:	d1557c63 	sub	x3, x3, #0x55f, lsl #12
+   8:	ea0301b4 	ands	x20, x13, x3
+   c:	8a000000 	and	x0, x0, x0

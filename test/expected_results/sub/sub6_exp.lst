@@ -1,0 +1,11 @@
+
+test/exp/test/gen/sub/sub6_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	51179652 	sub	w18, w18, #0x5e5
+   4:	1123cb39 	add	w25, w25, #0x8f2
+   8:	4b19725d 	sub	w29, w18, w25, lsl #28
+   c:	8a000000 	and	x0, x0, x0

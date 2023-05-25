@@ -1,0 +1,43 @@
+<!--main page-->
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <!-- Choose Tests -->
+        <div class="col-12">
+            <div class="card all-tests overflow-auto">
+              <div class="card-body">
+                {% if fname == "assemble" %}
+                  <h5 class="card-title"><b> Please, choose test to assemble.</b></h5>
+            {% else %}
+                  <h5 class="card-title"><b> Please, choose test to emulate.</b></h5>
+            {% endif %}
+                <table class="table table-borderless datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Test Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% if fname == "assemble" %}
+                      {%for name in names %}
+                          <tr>
+                              <td><a href="/assembler-results/{{name}}"> {{name}} </a></td>
+                          </tr>
+                      {%endfor%}  
+                    {% else %}   
+                      {%for name in names %}
+                          <tr>
+                              <td><a href="/emulator-results/{{name}}"> {{name}} </a></td>
+                          </tr>
+                      {%endfor%}   
+                    {% endif %}               
+                  </tbody>
+                </table>
+
+              </div>
+
+            </div>
+          </div><!-- End Choose Test -->
+
+    {% endblock %}

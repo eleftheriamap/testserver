@@ -1,0 +1,11 @@
+
+test/exp/test/gen/mul/mul0_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	114796b5 	add	w21, w21, #0x1e5, lsl #12
+   4:	51413a10 	sub	w16, w16, #0x4e, lsl #12
+   8:	1b107eb2 	mul	w18, w21, w16
+   c:	8a000000 	and	x0, x0, x0

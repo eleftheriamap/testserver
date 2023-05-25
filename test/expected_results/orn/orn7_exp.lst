@@ -1,0 +1,11 @@
+
+test/exp/test/gen/orn/orn7_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	115a7652 	add	w18, w18, #0x69d, lsl #12
+   4:	d108ead6 	sub	x22, x22, #0x23a
+   8:	2a764251 	orn	w17, w18, w22, lsr #16
+   c:	8a000000 	and	x0, x0, x0

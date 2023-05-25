@@ -1,0 +1,10 @@
+
+test/exp/test/gen/movk/movk18_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	513e7b39 	sub	w25, w25, #0xf9e
+   4:	728114b9 	movk	w25, #0x8a5
+   8:	8a000000 	and	x0, x0, x0

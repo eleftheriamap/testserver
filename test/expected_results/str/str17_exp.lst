@@ -1,0 +1,11 @@
+
+test/exp/test/gen/str/str17_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	91374bde 	add	x30, x30, #0xdd2
+   4:	11160a52 	add	w18, w18, #0x582
+   8:	f8326bd6 	str	x22, [x30, x18]
+   c:	8a000000 	and	x0, x0, x0

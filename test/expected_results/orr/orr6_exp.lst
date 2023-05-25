@@ -1,0 +1,11 @@
+
+test/exp/test/gen/orr/orr6_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	915ae718 	add	x24, x24, #0x6b9, lsl #12
+   4:	d14ad739 	sub	x25, x25, #0x2b5, lsl #12
+   8:	aad92317 	orr	x23, x24, x25, ror #8
+   c:	8a000000 	and	x0, x0, x0

@@ -1,0 +1,10 @@
+
+test/exp/test/gen/movk/movk2_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	911cb929 	add	x9, x9, #0x72e
+   4:	728d9589 	movk	w9, #0x6cac
+   8:	8a000000 	and	x0, x0, x0

@@ -1,0 +1,152 @@
+<!--results page for all tests-->
+{% extends 'base.html' %}
+
+<!--body part-->
+{% block content %}
+
+    <!-- if test or solution directory are not found-->
+    {% if directory_error %}
+        <!-- Directory Error Card -->
+        <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card directory_error-card">
+                <div class="card-body">
+                    <h5 class="card-title"><b style='color:red;'> Directory Not Found </b></h5>
+                        <p> Please make sure that:
+                            <ul>
+                                <li> The /testserver/solution directory exists </li>
+                                <li> The /testserver/test/test_cases directory exists. </li>
+                                <li> The /testserver/test/expected_results directory exists. </li>
+                            </ul>
+                        </p>
+                </div>
+            </div>
+        </div><!-- End Directory Error Card --> 
+
+    <!-- if files are missing from ./tests directory-->    
+    {% elif file_errors %}
+        <!-- File Error Card -->
+        <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card directory_error-card">
+                <div class="card-body">
+                    <h5 class="card-title"><b style='color:red;'> File(s) Not Found</b></h5>
+                        <p> The files below are missing:
+                            <ul>
+                                {%for i in file_errors%}
+                                <li>{{i}}</li>
+                                {%endfor%}
+                            </ul>
+                        </p>
+                        <p>Please download again the /testserver/test folder. </p>
+                </div>
+            </div>
+        </div><!-- End File Error Card -->
+
+        <!-- if emulator not found-->    
+        {% elif emulator_error %}
+        <!-- Execution Error Card -->
+        <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card directory_error-card">
+                <div class="card-body">
+                    <h5 class="card-title"><b style='color:red;'> Executable Not Found</b></h5>
+                        <p> The emulate executable was not found:  <br>
+                            <ul>
+                                <li>Please, make sure that you have compiled your solution from the navigation bar.</li>
+                                <li>Please, make sure that your emulator is implemented in an executable named emulate.</li>
+                                <li>Please, make sure that your emulate executable is somewhere under /testserver/ direcotry</li>
+
+                            </ul>
+                        </p>
+                </div>
+            </div>
+        </div><!-- End File Error Card -->
+ 
+            <!-- if emulator not found-->    
+
+        
+        <!-- if emulator not found-->    
+        {% elif execution_error %}
+        <!-- Execution Error Card -->
+        <div class="col-xxl-4 col-xl-12">
+            <div class="card info-card directory_error-card">
+                <div class="card-body">
+                    <h5 class="card-title"><b style='color:red;'> Test {{fname}} FAILED to emulate </b></h5>
+                        <p> Emulator failed to emulate {{fname}} and produced the error below: <br>
+                            {{execution_error}}
+                        </p>
+                </div>
+            </div>
+        </div><!-- End File Error Card -->
+        
+    <!-- if no directory or filer errors have occured-->
+    {% else %}
+        <!-- Specific Test  Result -->
+        <section class="section dashboard">
+            <div class="row">
+                <!-- Test Result Card -->
+                <div class="col-xxl-4 col-xl-12">
+                    <div class="card info-card test-result-card">          
+                          <div class="card-body">
+                                {% if results == "CORRECT" %}
+                                    <h5 class="card-title"> <b  style="color:green"> Test {{ fname }} emulated CORRECTLY </b> </h5>
+                                {% elif results == "INCORRECT" %}
+                                    <h5 class="card-title"> <b  style="color:red"> Test {{ fname }} emulated INCORRECTLY </b> </h5>
+                                {% endif %}
+          
+                          </div>
+                        </div>
+                      </div><!-- End Test Result Card -->                
+    
+        
+                    <!-- Expected Output Card -->
+                    <div class="col-xxl-4 col-md-6">
+                      <div class="card info-card expeted_output-card">        
+                        <div class="card-body">
+                          <h5 class="card-title"> <b> Expected Output </b></h5>
+                          <div class="d-flex align-items-center">    
+                            <p>  
+                                {%for line in expected_output%}
+                                    {{line}} <br>
+                                {%endfor%}
+                            </p>    
+                            </div>
+                          </div>
+                        </div>
+                    </div><!-- End Expected OUtput Card -->
+        
+                    <!-- Actual Output Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card actual_output-card">        
+                            <div class="card-body">
+                                {% if results == "CORRECT" %}
+                                    <h5 class="card-title"> <b  style="color:green"> Produced Output </b> </h5>
+                                {% else %}
+                                    <h5 class="card-title"> <b  style="color:red"> Produced Output </b> </h5>
+                                {% endif %}
+                              <div class="d-flex align-items-center">  
+                                {% if results == "CORRECT" %}
+                                    <p style="color:green"> 
+                                    {%for line in actual_output%}
+                                        {{line}} <br>
+                                    {%endfor%}
+                                    </p>
+                                {% else %}
+                                    <p style="color:red"> 
+                                    {%for line in actual_output%}
+                                        {{line}} <br>
+                                    {%endfor%}
+                                    </p>
+                                {% endif %}
+   
+                                </div>
+                              </div>
+                            </div>
+                    </div><!-- End Actual Output Card -->
+        
+
+
+                </div>
+            </section>
+        
+
+    {% endif %}
+{% endblock %}

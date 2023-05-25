@@ -1,0 +1,9 @@
+
+test/exp/test/gen/add/add15_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	91014d2e 	add	x14, x9, #0x53
+   4:	8a000000 	and	x0, x0, x0

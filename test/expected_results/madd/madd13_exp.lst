@@ -1,0 +1,12 @@
+
+test/exp/test/gen/madd/madd13_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	51399884 	sub	w4, w4, #0xe66
+   4:	d1151c00 	sub	x0, x0, #0x547
+   8:	912bd929 	add	x9, x9, #0xaf6
+   c:	9b002483 	madd	x3, x4, x0, x9
+  10:	8a000000 	and	x0, x0, x0

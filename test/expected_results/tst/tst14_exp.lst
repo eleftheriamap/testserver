@@ -1,0 +1,11 @@
+
+test/exp/test/gen/tst/tst14_exp.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	510281ef 	sub	w15, w15, #0xa0
+   4:	9173c463 	add	x3, x3, #0xcf1, lsl #12
+   8:	ea0301ff 	tst	x15, x3
+   c:	8a000000 	and	x0, x0, x0
